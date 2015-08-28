@@ -1,19 +1,18 @@
 \documentclass[aspectratio=169,11pt,hyperref={colorlinks=true}]{beamer}
 % Inserting graphics
 \usepackage{graphicx}
-
 % Side-by-side figures, etc
 \usepackage{subfigure}
-
 % Code snippits
 \usepackage{listings}
-
 % Color stuff
 \usepackage{color}
-
 \usepackage{amsmath}
-
 \usepackage{tikz}
+\newcommand\RBox[1]{%
+  \tikz\node[draw,rounded corners,align=center,] {#1};%
+}
+\usepackage{hyperref}
 %\usecolortheme{buzz}
 %\usecolortheme{wolverine}
 %\usetheme{Boadilla}
@@ -21,28 +20,113 @@
 \setlength{\abovecaptionskip}{0pt}
 \setlength{\floatsep}{0pt}
 
+\author[Matthew Treinish \& Andrea Frittoli]{%
+    \texorpdfstring{
+        \begin{columns}
+            \column{.45\linewidth}
+            \centering
+            \RBox{Matthew Treinish\\
+            \href{mailto:mtreinish@kortar.org}{mtreinish@kortar.org}\\
+            \texttt{mtreinish on Freenode}}
+            \column{.45\linewidth}
+            \centering
+            \RBox{Andrea Frittoli\\
+            \href{mailto:andrea.frittoli@hp.com}{andrea.frittoli@hp.com}\\
+            \texttt{andreaf on Freenode}}
+        \end{columns}
+   }
+   {Matthew Treinish \& Andrea Frittoli}
+}
+\date{Oct 27, 2015}
 
-\begin{document}
 \title[External Plugin Interfaces for OpenStack QA Projects
 \hspace{2em}\insertframenumber/\inserttotalframenumber]{External Plugin Interfaces for OpenStack QA Projects}
-\author{Matthew Treinish\\
-    \texttt{mtreinish@kortar.org}\newline\newline
-    \texttt{mtreinish on Freenode}}
-\author{Andrea Fritolli\\
-     \texttt{andrea.frittoli@hp.com}\newline\newline
-     \texttt{andreaf on Freenode}}
-\date{Oct 27, 2015}
+
+\begin{document}
+
 
 \begin{frame}
     \titlepage{}
+    \centering
+    \href{https://github.com/mtreinish/external\_plugins}{https://github.com/mtreinish/external\_plugins}
+\end{frame}
+
+\section{History behind plugins}
+\begin{frame}
+\frametitle{Scaling Limitations}
+\end{frame}
+
+\begin{frame}
+    \frametitle{The Big Tent\ldots}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Current QA Projects}
+    \begin{itemize}
+    \item{bashate}
+    \item{devstack}
+    \item{devstack-plugin-cookiecutter}
+    \item{devstack-vagrant}
+    \item{eslint-config-openstack}
+    \item{grenade}
+    \item{hacking}
+    \item{os-testr}
+    \item{tempest}
+    \item{temest-lib}
+    \item{tempest-plugin-cookiecutter}
+    \item{stackviz}
+    \end{itemize}
+\end{frame}
+
+\section{Devstack Plugins}
+\begin{frame}
+\frametitle{Devstack Plugins}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Projects using Devstack Plugins}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Howto write a Devstack Plugin}
+
+\end{frame}
+
+\section{Tempest Plugins}
+\begin{frame}
+    \frametitle{Tempest Plugins}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Projects using tempest plugins}
+
+\end{frame}
+
+\begin{frame}
+    \frametitle{Howto Write a Tempest Plugin}
+
+\end{frame}
+
+\section{Grenade Plugins}
+\begin{frame}
+    \frametitle{Grenade Plugins}
+\end{frame}
+
+\begin{frame}
+\frametitle{Projects using Grenade Plugins}
+
 \end{frame}
 
 \section{More Information}
 \begin{frame}
-    \frametitle{Summary}
+\frametitle{Where to get more information}
     \begin{itemize}
-    \item 
-\end{itemize}
+        \item Tempest Plugin Docs: \href{http://docs.openstack.org/developer/tempest/plugin.html}{http://docs.openstack.org/developer/tempest/plugin.html}
+        \item Devstack Plugin Docs: \href{http://docs.openstack.org/developer/devstack/plugins.html}{http://docs.openstack.org/developer/devstack/plugins.html}
+        \item Grenade Plugin Docs:
+        \item openstack-dev ML: \href{mailto:openstack-dev@lists.openstack.org}{openstack-dev@lists.openstack.org}
+        \item \#openstack-qa on Freenode
+    \end{itemize}
 \end{frame}
 
 \section{Questions}
