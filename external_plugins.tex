@@ -1,4 +1,11 @@
 \documentclass[aspectratio=169,11pt,hyperref={colorlinks=true}]{beamer}
+\usetheme{boxes}
+\setbeamertemplate{navigation symbols}{}
+\definecolor{openstack}{RGB}{149,0,4}
+\setbeamercolor{titlelike}{fg=openstack}
+\setbeamercolor{structure}{fg=openstack}
+\hypersetup{colorlinks,urlcolor=openstack}
+\setbeamertemplate{footline}[frame number]
 % Inserting graphics
 \usepackage{graphicx}
 % Side-by-side figures, etc
@@ -25,14 +32,14 @@
         \begin{columns}
             \column{.45\linewidth}
             \centering
-            \RBox{Matthew Treinish\\
+            Matthew Treinish\\
             \href{mailto:mtreinish@kortar.org}{mtreinish@kortar.org}\\
-            \texttt{mtreinish on Freenode}}
+            \texttt{mtreinish on Freenode}
             \column{.45\linewidth}
             \centering
-            \RBox{Andrea Frittoli\\
+            Andrea Frittoli\\
             \href{mailto:andrea.frittoli@hp.com}{andrea.frittoli@hp.com}\\
-            \texttt{andreaf on Freenode}}
+            \texttt{andreaf on Freenode}
         \end{columns}
    }
    {Matthew Treinish \& Andrea Frittoli}
@@ -44,12 +51,22 @@
 
 \begin{document}
 
-
-\begin{frame}
+{
+\setbeamertemplate{background canvas}{\includegraphics[width=\paperwidth,height=\paperheight]{background_title.png}}
+\setbeamertemplate{footline}{}
+\begin{frame}[noframenumbering]
+    \setbeamercolor{titlelike}{fg=white}
+    \setbeamercolor{structure}{fg=white}
+    \setbeamercolor{normal text}{fg=white}
+    \hypersetup{colorlinks,urlcolor=white}
+    \setbeamercolor{author}{fg=white}
+    \setbeamercolor{date}{fg=white}
+    \setbeamercolor{background}{bg=openstack}
     \titlepage{}
     \centering
     \href{https://github.com/mtreinish/external\_plugins}{https://github.com/mtreinish/external\_plugins}
 \end{frame}
+}
 
 \section{What is OpenStack QA?}
 \begin{frame}
