@@ -126,7 +126,18 @@ any point during the release cycle.}
 \section{Current Plugin Interfaces}
 \subsection{Devstack Plugins}
 \begin{frame}
-\frametitle{Devstack Plugins}
+	\frametitle{Devstack Plugins}
+    \begin{itemize}
+    \item{Bits of bash code that live outside of devstack tree}
+    \item{Called via a strong contract}
+    \item{Maintained by the project owners}
+    \item{Tested via OpenStack CI}
+    \end{itemize}
+
+    \begin{itemize}
+    \item{Project plugins}
+    \item{Driver / configuration plugins}
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
