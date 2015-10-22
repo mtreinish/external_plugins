@@ -24,6 +24,9 @@
 %\usecolortheme{wolverine}
 %\usetheme{Boadilla}
 
+\setbeamerfont{caption}{series=\normalfont,size=\fontsize{6}{8}}
+\setbeamertemplate{caption}{\raggedright\insertcaption\par}
+
 \setlength{\abovecaptionskip}{0pt}
 \setlength{\floatsep}{0pt}
 
@@ -153,20 +156,22 @@ any point during the release cycle.}
     	\begin{itemize}
     		\item Configures existing OpenStack service to use a different driver / backend
     	\end{itemize}
+    \item Registry of plugins maintained by the community: \hfill
+    \\ http://docs.openstack.org/developer/devstack/plugin-registry.html
     \end{itemize}
 \end{frame}
 
 \begin{frame}
     \frametitle{Projects using Devstack Plugins}
-    \begin{itemize}
-    	\item Registry of plugins maintained by the community: \hfill
-    	\\ http://docs.openstack.org/developer/devstack/plugin-registry.html
-    \end{itemize}
+    \begin{figure}[p]
+    	\centering
+    	\includegraphics[width=0.8\textwidth]{devstack-plugins.png}
+    	\caption{Source: git log --diff-filter=A --format=\%cd --date=short -1 -- devstack/plugin.sh}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Howto write a Devstack Plugin}
-
 \end{frame}
 
 \subsection{Tempest Plugins}
@@ -176,12 +181,15 @@ any point during the release cycle.}
 
 \begin{frame}
     \frametitle{Projects using tempest plugins}
-
+    \begin{figure}[p]
+    	\centering
+    	\includegraphics[width=0.8\textwidth]{tempest-plugins.png}
+    	\caption{Source: git blame setup.cfg | egrep ') tempest'}
+    \end{figure}
 \end{frame}
 
 \begin{frame}
     \frametitle{Howto Write a Tempest Plugin}
-
 \end{frame}
 
 \subsection{Grenade Plugins}
@@ -190,8 +198,16 @@ any point during the release cycle.}
 \end{frame}
 
 \begin{frame}
-\frametitle{Projects using Grenade Plugins}
+	\frametitle{Projects using Grenade Plugins}
+    \begin{figure}[p]
+    	\centering
+    	\includegraphics[width=0.8\textwidth]{grenade-plugins.png}
+    	\caption{Source: git log --diff-filter=A --format=\%cd --date=short -1 -- devstack/upgrade/upgrade.sh}
+    \end{figure}
+\end{frame}
 
+\begin{frame}
+    \frametitle{Howto Write a Grenade Plugin}
 \end{frame}
 
 \section{More Information}
