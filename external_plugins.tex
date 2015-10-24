@@ -177,6 +177,13 @@ any point during the release cycle.}
 \subsection{Tempest Plugins}
 \begin{frame}
     \frametitle{Tempest Plugins}
+    \begin{itemize}
+    	\item{Test suites external to Tempest}
+    	\item{Based on stevedore plugin model}
+    	\item{Automatically discovered when installed}
+    	\item{Test code built on top of tempest-lib}
+    	\item{Tempest + own configuration parameters} 
+    \end{itemize}
 \end{frame}
 
 \begin{frame}
@@ -190,6 +197,17 @@ any point during the release cycle.}
 
 \begin{frame}
     \frametitle{Howto Write a Tempest Plugin}
+    \begin{itemize}
+    	\item{Code can be hosted in existing or dedicated git project}
+    	\item{Extend plugins.TempestPlugin from tempest (or tempest-lib)}
+    	\item{Implement all abstract methods}
+    		\begin{itemize}
+    			\item{Test discovery: }
+    			\item{Configuration options: }
+    		\end{itemize}
+    	\item{Check if everything you need is tempest lib}
+    	\item{Setup CI to test with your plugin, and keep it tested}
+    \end{itemize}
 \end{frame}
 
 \subsection{Grenade Plugins}
