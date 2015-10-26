@@ -181,24 +181,21 @@ any point during the release cycle.}
 \subsection{Devstack Plugins}
 \begin{frame}
 	\frametitle{Devstack Plugins}
+
     \begin{itemize}
-    \item{Bits of bash code that live outside of devstack tree}
-    \item{Called via a strong contract}
-    \item{Maintained by the project owners}
-    \item{Tested via OpenStack CI}
+        \item{Multiple functions}
+        \begin{itemize}
+            \item{Enable deploying extra projects in devstack}
+            \item{Enable using custom drivers in devstack}
+            \item{Enable deploying extra services on top of a devstack cloud}
+        \end{itemize}
     \end{itemize}
 
     \begin{itemize}
-    \item{Project plugins}
-    	\begin{itemize}
-    		\item Installs new OpenStack service as part of devstack
-    	\end{itemize}
-    \item{Driver / configuration plugins}
-    	\begin{itemize}
-    		\item Configures existing OpenStack service to use a different driver / backend
-    	\end{itemize}
-    \item Registry of plugins maintained by the community: \hfill
-    \\ http://docs.openstack.org/developer/devstack/plugin-registry.html
+        \item Bits of bash code that live outside of devstack tree
+        \item Called via a strong contract
+        \item Registry of plugins maintained by the community: \hfill
+        \\ http://docs.openstack.org/developer/devstack/plugin-registry.html
     \end{itemize}
 \end{frame}
 
@@ -216,7 +213,13 @@ any point during the release cycle.}
     \begin{itemize}
     	\item Devstack plugin cookie-cutter: \hfill
     	\\ git://git.openstack.org/openstack-dev/devstack-plugin-cookiecutter
-    	\item Implement functions relevant to the plugin
+    \end{itemize}
+
+    \begin{itemize}
+        \item settings
+        \begin{itemize}
+            \item Global variables sourced very early 
+        \end{itemize}
     \end{itemize}
 \end{frame}
 
@@ -228,7 +231,7 @@ any point during the release cycle.}
         \item Unifies configuration between plugin(s) and in-tree
     \end{itemize}
     \begin{itemize}
-    	\item{Based on stevedore plugin model}
+    	\item{Based on stevedore extension manager}
     	\item{Automatically discovered when installed}
     	\item{Test code built on top of tempest-lib}
     \end{itemize}
@@ -248,6 +251,9 @@ any point during the release cycle.}
     \begin{itemize}
         \item Tempest plugin cookie-cutter: \hfill
         \\ git://git.openstack.org/openstack/tempest-plugin-cookiecutter
+    \end{itemize}
+
+    \begin{itemize}
     	\item{Code can be hosted in existing or dedicated git project}
     	\item{Extend plugins.TempestPlugin from tempest (or tempest-lib)}
     	\item{Implement all abstract methods}
@@ -255,8 +261,8 @@ any point during the release cycle.}
     			\item{Test discovery}
     			\item{Configuration options}
     		\end{itemize}
-    	\item{Check if everything you need is tempest lib}
-    	\item{Setup CI to run test using your plugin, and to keep it tested}
+    	\item{Is everything you need is tempest-lib?}
+    	\item{Setup CI}
     \end{itemize}
 \end{frame}
 
