@@ -23,6 +23,7 @@
 %\usecolortheme{buzz}
 %\usecolortheme{wolverine}
 %\usetheme{Boadilla}
+\usepackage[T1]{fontenc}
 
 \setbeamerfont{caption}{series=\normalfont,size=\fontsize{6}{8}}
 \setbeamertemplate{caption}{\raggedright\insertcaption\par}
@@ -211,7 +212,7 @@ any point during the release cycle.}
     \begin{figure}[p]
     	\centering
     	\includegraphics[width=0.8\textwidth]{tempest-plugins.png}
-    	\caption{Source: git blame setup.cfg | egrep ') tempest'}
+        \caption{Source: git blame -L '/\^{}tempest/,+1' setup.cfg | awk '\{print \$1\}' | xargs git log -1 --format=\%cd --date=short}
     \end{figure}
 \end{frame}
 
