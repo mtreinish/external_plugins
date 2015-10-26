@@ -289,24 +289,26 @@ any point during the release cycle.}
     \begin{itemize}
     \item upgrade.sh
         \begin{itemize}
-            \item
+            \item The script to run the upgrade after the old has been shutdown
         \end{itemize}
     \item shutdown.sh
         \begin{itemize}
-            \item 
+            \item The script to shutdown a service
         \end{itemize}
     \item settings
         \begin{itemize}
-            \item register the project for upgrade
-            \item 
+            \item register any devstack plugins
+            \item register any services for upgrade
         \end{itemize}
     \item resources.sh
         \begin{itemize}
-            \item 
+            \item Create resources
+            \item Check resource survival across upgrade
+            \item Teardown resource after upgrade
         \end{itemize}
     \item Per Release manual steps
         \begin{itemize}
-            \item
+            \item Any manual steps to upgrade between releases
         \end{itemize}
 \end{itemize}
 \end{frame}
