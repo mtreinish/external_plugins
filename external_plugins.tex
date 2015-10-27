@@ -220,7 +220,16 @@ any point during the release cycle.}
         \begin{itemize}
             \item Global variables sourced very early 
         \end{itemize}
+        \item plugin.sh
+        \begin{itemize}
+            \item Main plugin file, called by devstack at different times during stack.sh
+        \end{itemize}
     \end{itemize}
+\end{frame}
+
+\begin{frame}
+    \frametitle{Howto write a Devstack Plugin}
+        \lstinputlisting[basicstyle=\tiny,language=bash]{devstack-plugin}
 \end{frame}
 
 \subsection{Tempest Plugins}
@@ -267,12 +276,12 @@ any point during the release cycle.}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Tempest Plugin Interface}
+    \frametitle{Howto Write a Tempest Plugin}
         \lstinputlisting[basicstyle=\tiny,language=Python]{tempest_plugin.py}
 \end{frame}
 
 \begin{frame}
-    \frametitle{Tempest Plugin Interface}
+    \frametitle{Howto Write a Tempest Plugin}
         \lstinputlisting[basicstyle=\tiny,language=Python]{tempest_plugin_2.py}
 \end{frame}
 
